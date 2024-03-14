@@ -1,0 +1,109 @@
+/* Enables smooth scrolling for anchor links throughout the document */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sets the default margin and padding for the body to 0, and sets a default font family */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #081b29;
+}
+
+/* Styles for the navigation bar, including background color, layout, and alignment */
+.navbar {
+    background-color: #081b29; /* White background for the navbar */
+    overflow: hidden; /* Ensures no content spills outside the navbar */
+    height: 70px; /* Fixed height of the navbar */
+    display: flex; /* Uses Flexbox for layout */
+    align-items: center; /* Vertically centers the content */
+    justify-content: space-between; /* Spaces the logo and navigation items evenly */
+}
+
+/* Styles for the logo image inside the navbar */
+.navbar-logo img {
+    height: 60px; /* Height of the logo */
+    margin-left: 20px; /* Left margin for logo spacing */
+}
+
+/* Removes default list styling for navigation links and applies Flexbox for horizontal layout */
+.navbar ul {
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display list items in a row */
+    align-items: center; /* Vertically align list items */
+}
+
+/* Styles for individual navigation links */
+.navbar ul li a {
+    line-height: 70px; /* Aligns link text vertically */
+    color: #ffffff; /* Black text color */
+    padding: 12px 30px; /* Padding around links for clickable area */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 20px; /* Text size */
+    font-weight: normal; /* Normal text weight */
+    text-transform: uppercase; /* Makes text uppercase */
+}
+
+/* Hover effect for navigation links */
+.navbar ul li a:hover {
+    background: #00d1fbfe; /* Light green background on hover */
+    border-radius: 6px; /* Rounded corners on hover */
+}
+
+.home {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    font-family: cursive;
+    
+}
+
+.home-content {
+    max-width: 600px;
+
+}
+
+.home-content h1 {
+    font-size: 41px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.home-content h3 {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(0, 191, 255);
+}
+
+.home-content p {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf8;
+    border: 2px solid #00abf8;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
