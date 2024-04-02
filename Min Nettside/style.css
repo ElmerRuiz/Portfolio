@@ -1,0 +1,343 @@
+/* Enables smooth scrolling for anchor links throughout the document */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sets the default margin and padding for the body to 0, and sets a default font family */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styles for the navigation bar, including background color, layout, and alignment */
+.navbar {
+    background-color: #ffffff; /* White background for the navbar */
+    overflow: hidden; /* Ensures no content spills outside the navbar */
+    height: 70px; /* Fixed height of the navbar */
+    display: flex; /* Uses Flexbox for layout */
+    align-items: center; /* Vertically centers the content */
+    justify-content: space-between; /* Spaces the logo and navigation items evenly */
+}
+
+/* Styles for the logo image inside the navbar */
+.navbar-logo img {
+    height: 60px; /* Height of the logo */
+    margin-left: 20px; /* Left margin for logo spacing */
+}
+
+/* Removes default list styling for navigation links and applies Flexbox for horizontal layout */
+.navbar ul {
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display list items in a row */
+    align-items: center; /* Vertically align list items */
+}
+
+/* Styles for individual navigation links */
+.navbar ul li a {
+    line-height: 70px; /* Aligns link text vertically */
+    color: #000000; /* Black text color */
+    padding: 12px 30px; /* Padding around links for clickable area */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 14px; /* Text size */
+    font-weight: normal; /* Normal text weight */
+    text-transform: uppercase; /* Makes text uppercase */
+}
+
+/* Hover effect for navigation links */
+.navbar ul li a:hover {
+    background: #ccf6cafe; /* Light green background on hover */
+    border-radius: 6px; /* Rounded corners on hover */
+}
+
+/* Styling for a text box, typically used for headings or important content */
+.text-box {
+    background-color: rgb(0, 0, 0); /* Black background */
+    border: 2px solid #000; /* Black border */
+    border-radius: 23%; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    display: inline-block; /* Allows the box to fit its content */
+    margin-top: 20px; /* Top margin */
+    box-shadow: 0 4px 8px 0 rgba(255, 8, 0, 0.884); /* Red shadow for emphasis */
+}
+
+/* Styling for the main header text */
+.header h1 {
+    margin: 0; /* Removes default margin */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Centers the text horizontally */
+}
+
+/* Background and text styling for the header section */
+.header {
+    padding: 20px; /* Padding inside the header */
+    text-align: center; /* Centers content horizontally */
+    background: #6bafe7; /* Blue background */
+    color: white; /* White text color */
+    font-size: 30px; /* Text size */
+}
+
+/* Ensures all elements use border-box sizing for width and padding calculations */
+* {
+    box-sizing: border-box;
+}
+
+/* Flexbox layout for rows, allowing wrapping */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styling for side and main content areas, with background color, padding, and border radius */
+.side, .main {
+    flex: 50%; /* Takes up half of the container width */
+    background-color: rgb(255, 255, 255); /* White background */
+    padding: 20px; /* Padding inside the containers */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Ensures images fill the width of their container */
+img {
+    width: 100%;
+}
+
+/* Container for sliding images or content, with styling for border, radius, and shadow */
+.container1 {
+    width: 85vmin; /* Responsive width based on viewport minimum */
+    overflow: hidden; /* Hides overflow */
+    border: 20px solid #000000; /* Black border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px 0 rgb(0, 221, 255); /* Blue shadow */
+}
+
+/* Flexbox layout for sliding content with an infinite loop animation */
+.wrapper {
+    width: 100%;
+    display: flex;
+    animation: slide 14s infinite; /* Applies the "slide" animation */
+}
+/* Keyframes for the slide animation, moving content in a loop */
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+
+}
+
+/* Container styling for footer or similar sections, with max width and center alignment */
+.container2 {
+    max-width: 1170px;
+    margin: auto;
+}
+/* Flexbox layout for footer content */
+.row2 {
+    display: flexbox;
+    flex-wrap: wrap;
+}
+/* Footer styling with background color and padding */
+.footer {
+    background-color: rgb(0, 0, 0);
+    padding: 20px 0;
+}
+/* Styling for lists in the footer, removing default list styling */
+ul{
+    list-style: none;
+}
+/* Layout and styling for columns in the footer */
+.footer-col{
+    width: 25%; /* Each column takes up 25% of the width */
+    padding: 0 15px; /* Padding inside each column */
+}
+/* Styling for headings in footer columns */
+.footer-col h4{
+    font-size: 18px;/* Text size */
+    color: #ffffff;/* White text color */
+    text-transform: capitalize;/* Capitalizes each word */
+    margin-bottom: 30px;/* Space below the heading */
+    font-weight: 500px;/* Medium text weight */
+    position: relative;/* Enables positioning of pseudo-elements */
+}
+/* Decorative before element for footer headings */
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;/* Pink color */
+    height: 2px;/* Height of the decorative line */
+    width: 50px;/* Width of the decorative line */
+}
+/* Styling for links in the footer, with spacing, color, and display block for full-width click area */
+.footer-col ul li:not( :last-child){
+    margin-bottom: 10px;/* Space between each list item */
+}
+
+.footer-col ul li a{
+    font-size: 16px;/* Text size */
+    text-transform: capitalize;/* Capitalizes each word */
+    color: #ffffff;
+    text-decoration: none;/* Removes underline */
+    font-weight: 300;/* Light text weight */
+    color: #bbbbbb;/* Grey text color */
+    display: block;/* Makes the link fill the width of its container */
+}
+
+/* Styling for a "go to top" button, fixed positioning, and appearance */
+.gotopbtn {
+    position: fixed;/* Fixed position on the viewport */
+    width: 50px;/* Width of the button */
+    height: 50px;/* Height of the button */
+    background: #80D9FF;/* Light blue background color */
+    bottom: 40px;/* Distance from the bottom of the viewport */
+    right: 50px;/* Distance from the right of the viewport */
+
+    text-decoration: none;/* Removes underline */
+    text-align: center;/* Centers the icon */
+    line-height: 50px;/* Centers the icon vertically */
+    color: white;/* White icon color */
+    font-size: 22px;/* Icon size */
+    border-radius: 15px;/* Rounded corners */
+
+}
+
+/* Styling for image containers, positioning, and text color */
+.image-container {
+    position: relative; /* Allows positioning of nested elements */
+    text-align: center; /* Centers the text */
+    color: white; /* White text color */
+}
+
+/* Ensures images in containers fill the width and maintain their aspect ratio */
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Flexbox layout for sections within a container, spacing them out evenly */
+.container3 {
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    align-items: flex-start; /* Aligns items at the start of the flex container */
+}
+
+/* Styling for sections within container3, setting their width */
+.left-section, .right-section {
+    width: 50%; /* Each section takes up half of the container's width */
+}
+
+/* Heading styling within .il-heading class, including color, font, weight, and decorative elements */
+.il-heading {
+    color: #2a2a2a; /* Dark grey text color */
+    font-family: 'Arial', sans-serif; /* Arial font */
+    font-weight: bold; /* Bold text weight */
+    padding-bottom: 10px; /* Padding below the text */
+    border-bottom: 2px solid #4CAF50; /* Green bottom border */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Styling for unordered lists within the .il-ul class, removing default styling */
+.il-ul {
+    list-style-type: none; /* Removes default list bullets */
+    padding: 0; /* Removes default padding */
+}
+
+/* Styling for list items within the .il-ul class, including color, font, and spacing */
+.il-li {
+    color: #333; /* Dark grey text color */
+    font-family: 'Verdana', sans-serif; /* Verdana font */
+    margin-bottom: 10px; /* Space between list items */
+    padding-left: 20px; /* Padding to the left of the text */
+}
+
+/* Adds custom bullet points before list items in the .il-li class */
+.il-li:before {
+    content: '•'; /* Custom bullet point */
+    color: #4CAF50; /* Green color for the bullet */
+    font-weight: bold; /* Bold weight for the bullet */
+    display: inline-block; 
+    width: 20px; /* Width allocation for the bullet */
+    margin-left: -20px; /* Positions the bullet outside the list item */
+}
+
+/* Additional styling for a secondary header or section */
+.header2 {
+    padding: 20px; /* Padding inside the section */
+    text-align: center; /* Centers the text */
+    background: #161a1b; /* Dark background color */
+    color: rgb(255, 255, 255); /* White text color */
+    font-size: 30px; /* Text size */
+}
+
+/* Styling for a testimonials section, including width, margin, padding, and text alignment */
+.testimonials {
+    width: 80%; /* Width relative to the parent container */
+    margin: auto; /* Centers the section horizontally */
+    padding-top: 100px; /* Padding at the top of the section */
+    text-align: center; /* Centers the text */
+}
+
+/* Flexbox layout for rows within the testimonials section, including spacing and distribution */
+.row3 {
+    margin-top: 5%; /* Top margin */
+    display: flex; /* Uses Flexbox for layout */
+    justify-content: space-between; /* Distributes space evenly between items */
+}
+
+/* Styling for individual testimonials, including background color, padding, and layout */
+.tistimonial-col {
+    flex-basis: 44%; /* Basis width of each testimonial */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 5%; /* Bottom margin */
+    text-align: left; /* Aligns text to the left */
+    background: #fff3f3; /* Light pink background color */
+    padding: 25px; /* Padding inside the testimonial */
+    cursor: pointer; /* Changes the cursor to indicate interactivity */
+    display: flex; /* Uses Flexbox for layout */
+}
+
+/* Styling for images within testimonials, including size and border radius */
+.tistimonial-col img {
+    height: 60px; /* Height of the image */
+    width: 100px; /* Width of the image */
+    margin-left: 5px; /* Left margin */
+    margin-right: 15px; /* Right margin */
+    border-radius: 50%; /* Circular images */
+}
+
+/* Resets padding for paragraphs within testimonials */
+.tistimonial-col p {
+    padding: 0; /* Removes default padding */
+}
+
+/* Styling for testimonial authors' names, including top margin and text alignment */
+.tistimonial-col h3 {
+    margin-top: 15px; /* Top margin */
+    text-align: left; /* Aligns text to the left */
+}
+/* Styling for font size */
+.h3Text{
+    font-size: 30px;
+}
